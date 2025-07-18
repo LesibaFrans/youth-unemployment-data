@@ -8,7 +8,7 @@ st.set_page_config(page_title='Youth Unemployment Dashboard', layout='wide')
 # Load Data
 @st.cache_data
 def load_data():
-    df = pd.read_csv('../data/world_bank/world_bank_dataset.csv', skiprows=4)
+    df = pd.read_csv('data/world_bank/world_bank_dataset.csv', skiprows=4)
     df = df.drop(columns=['Indicator Name', 'Indicator Code'])
     df_long = df.melt(id_vars=['Country Name', 'Country Code'], var_name='Year', value_name='Youth Unemployment (%)')
     df_long['Year'] = pd.to_numeric(df_long['Year'], errors='coerce')
