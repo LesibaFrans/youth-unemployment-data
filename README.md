@@ -39,7 +39,7 @@ pip install -r requirements.txt
 
 3. Run the app:
 ```bash
-streamlit run app.py
+streamlit run app/app.py
 ```
 
 > 📁 Make sure to rename and place the World Bank dataset inside a `data/` folder:
